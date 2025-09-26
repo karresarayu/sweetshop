@@ -20,5 +20,5 @@ Copilot helped me quickly draft RESTful endpoints and validation logic, which I 
 Best Practices: Both tools provided tips on security (password hashing, JWT), code organization, and error handling.
 
 
-#My Reflection:
+# My Reflection:
 Using AI tools felt like having a knowledgeable coding partner available 24/7. They helped me move past blockers quickly, especially with tricky CSS and backend integration. The AI suggestions often introduced me to new patterns and best practices, making my code cleaner and more robust. Overall, AI accelerated my workflow, reduced frustration, and let me focus more on building features and polishing the user experience.
