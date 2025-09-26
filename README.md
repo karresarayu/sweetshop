@@ -8,9 +8,9 @@ This is a full-stack web application for managing a sweet/candy shop, built usin
 This section documents my use of AI tools during the development of this project, as required by the assessment policy.
 
 # AI Tool(s) Used:
-GitHub Copilot
-ChatGPT
-Claude AI
+GitHub Copilot.
+ChatGPT.
+Claude AI.
 
 # How I Used AI:
 I used Copilot to scaffold out Express routes, MongoDB models, and vanilla JS modules for the frontend, which I then customized for my needs.
