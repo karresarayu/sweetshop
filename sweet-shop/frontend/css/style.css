@@ -1,0 +1,1097 @@
+/* --- Sweet Shop Admin Panel Layout (Exact Match) --- */
+.admin-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 2.5rem 1.5rem 2rem 1.5rem !important;
+}
+.admin-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 2.5rem !important;
+}
+.admin-header h1 {
+    color: #e170b5 !important;
+    font-size: 2.5rem !important;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+.admin-header .btn-primary {
+    background: linear-gradient(90deg, #e170b5 0%, #ffb6d5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 16px !important;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: background 0.2s, box-shadow 0.2s !important;
+}
+.admin-header .btn-primary:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #e170b5 100%) !important;
+    box-shadow: 0 4px 18px #ffd6e0 !important;
+}
+.inventory-section {
+    background: #fff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 24px 0 #ffd6e0 !important;
+    padding: 2.2rem 2rem 1.5rem 2rem !important;
+    margin: 0 auto 2rem auto !important;
+    border: 1.5px solid #f8e1ef !important;
+}
+.inventory-header h2 {
+    color: #222 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.2rem !important;
+}
+.inventory-header p {
+    color: #bfa5b8 !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 1.5rem !important;
+}
+.inventory-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    font-size: 1.08rem !important;
+    background: transparent !important;
+}
+.inventory-table th, .inventory-table td {
+    padding: 1rem 0.7rem !important;
+    text-align: left !important;
+    border: none !important;
+}
+.inventory-table th {
+    color: #3a2d3c !important;
+    font-weight: 700 !important;
+    font-size: 1.13rem !important;
+    background: none !important;
+}
+.inventory-table tr:not(:last-child) td {
+    border-bottom: 1.5px solid #f8e1ef !important;
+}
+.inventory-table td {
+    vertical-align: middle !important;
+}
+.admin-badge {
+    display: inline-block !important;
+    padding: 0.3rem 1.1rem !important;
+    border-radius: 16px !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    background: #ffe0b2 !important;
+    color: #b84d8a !important;
+    border: none !important;
+    margin-right: 0.2rem !important;
+}
+.admin-status {
+    display: inline-block !important;
+    padding: 0.3rem 1.1rem !important;
+    border-radius: 16px !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    background: #ffe0f7 !important;
+    color: #e170b5 !important;
+    border: none !important;
+}
+.admin-status.in-stock {
+    background: #ffe0f7 !important;
+    color: #e170b5 !important;
+}
+.admin-status.out-of-stock {
+    background: #ffd6e0 !important;
+    color: #bfa5b8 !important;
+}
+.admin-action-btn {
+    background: #fff0fa !important;
+    color: #e170b5 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.5rem 0.7rem !important;
+    font-size: 1.1rem !important;
+    margin-right: 0.3rem !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+    cursor: pointer !important;
+    transition: background 0.2s, color 0.2s !important;
+    outline: none !important;
+}
+.admin-action-btn:hover {
+    background: #e170b5 !important;
+    color: #fff !important;
+}
+/* Modal Styles for Add/Edit Sweet */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(232, 130, 180, 0.08) !important;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background: #fff0fa !important;
+    margin: 5% auto;
+    border-radius: 20px !important;
+    padding: 2.2rem 2rem 1.5rem 2rem !important;
+    max-width: 400px !important;
+    width: 95vw !important;
+    box-shadow: 0 8px 32px 0 #ffd6e0 !important;
+    position: relative;
+}
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+.modal-header h2 {
+    color: #e170b5 !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+.modal-header .close {
+    font-size: 1.5rem !important;
+    color: #bfa5b8 !important;
+    cursor: pointer !important;
+    border: none !important;
+    background: none !important;
+    margin-left: 1rem !important;
+}
+/* --- Sweet Shop Admin Panel --- */
+.admin-panel-title {
+    color: #e170b5 !important;
+    font-size: 2.5rem !important;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.2rem !important;
+}
+.admin-panel-desc {
+    color: #bfa5b8 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 2.2rem !important;
+}
+.admin-inventory-card {
+    background: #fff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 24px 0 #ffd6e0 !important;
+    padding: 2.2rem 2rem 1.5rem 2rem !important;
+    margin: 0 auto 2rem auto !important;
+    max-width: 1100px !important;
+    width: 100% !important;
+    border: 1.5px solid #f8e1ef !important;
+}
+.admin-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    font-size: 1.08rem !important;
+    background: transparent !important;
+}
+.admin-table th, .admin-table td {
+    padding: 1rem 0.7rem !important;
+    text-align: left !important;
+    border: none !important;
+}
+.admin-table th {
+    color: #3a2d3c !important;
+    font-weight: 700 !important;
+    font-size: 1.13rem !important;
+    background: none !important;
+}
+.admin-table tr:not(:last-child) td {
+    border-bottom: 1.5px solid #f8e1ef !important;
+}
+.admin-badge {
+    display: inline-block !important;
+    padding: 0.3rem 1.1rem !important;
+    border-radius: 16px !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    background: #ffe0b2 !important;
+    color: #b84d8a !important;
+    border: none !important;
+    margin-right: 0.2rem !important;
+}
+.admin-badge.chocolate { background: #ffe0b2 !important; color: #b84d8a !important; }
+.admin-badge.gummies { background: #e0ffe7 !important; color: #b84d8a !important; }
+.admin-badge.caramel { background: #fff0b2 !important; color: #b84d8a !important; }
+.admin-badge.hardcandy { background: #e0e7ff !important; color: #b84d8a !important; }
+.admin-badge.lollipops { background: #ffe0f7 !important; color: #b84d8a !important; }
+.admin-badge.other { background: #f8e1ef !important; color: #b84d8a !important; }
+.admin-status {
+    display: inline-block !important;
+    padding: 0.3rem 1.1rem !important;
+    border-radius: 16px !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    background: #ffe0f7 !important;
+    color: #e170b5 !important;
+    border: none !important;
+}
+.admin-status.in-stock {
+    background: #ffe0f7 !important;
+    color: #e170b5 !important;
+}
+.admin-status.out-of-stock {
+    background: #ffd6e0 !important;
+    color: #bfa5b8 !important;
+}
+.admin-action-btn {
+    background: #fff0fa !important;
+    color: #e170b5 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.5rem 0.7rem !important;
+    font-size: 1.1rem !important;
+    margin-right: 0.3rem !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+    cursor: pointer !important;
+    transition: background 0.2s, color 0.2s !important;
+    outline: none !important;
+}
+.admin-action-btn:hover {
+    background: #e170b5 !important;
+    color: #fff !important;
+}
+.admin-add-btn {
+    background: linear-gradient(90deg, #e170b5 0%, #ffb6d5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 16px !important;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: background 0.2s, box-shadow 0.2s !important;
+    margin-bottom: 1.2rem !important;
+    float: right !important;
+}
+.admin-add-btn:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #e170b5 100%) !important;
+    box-shadow: 0 4px 18px #ffd6e0 !important;
+}
+.admin-panel-section {
+    background: linear-gradient(135deg, #fff0fa 60%, #ffd6e0 100%) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 8px 32px 0 #ffd6e0 !important;
+    padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+    margin: 2rem auto 2rem auto !important;
+    max-width: 1200px !important;
+    width: 100% !important;
+}
+/* --- Sweet Shop Auth Forms --- */
+.form-container {
+    min-height: 70vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: none !important;
+    padding: 2rem 0 !important;
+}
+
+.form-card {
+    background: #fff0fa !important;
+    border-radius: 24px !important;
+    box-shadow: 0 8px 32px 0 #ffd6e0 !important;
+    padding: 2.5rem 2rem 2rem 2rem !important;
+    max-width: 370px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 2rem 0 !important;
+}
+
+.form-icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #e170b5 !important;
+}
+
+.form-card h2 {
+    color: #e170b5 !important;
+    font-size: 2rem !important;
+    margin-bottom: 0.3rem !important;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+}
+.form-card p {
+    color: #b84d8a !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.form-group {
+    width: 100% !important;
+    margin-bottom: 1.1rem !important;
+}
+.form-group label {
+    display: block !important;
+    margin-bottom: 0.3rem !important;
+    color: #b84d8a !important;
+    font-weight: 600 !important;
+    font-size: 0.98rem !important;
+}
+.form-input {
+    width: 100% !important;
+    padding: 0.7rem 1rem !important;
+    border: 1.5px solid #ffd6e0 !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    background: #fff !important;
+    color: #3a2d3c !important;
+    transition: border 0.2s !important;
+    outline: none !important;
+    margin-bottom: 0.1rem !important;
+}
+.form-input:focus {
+    border: 1.5px solid #e170b5 !important;
+    background: #fff0fa !important;
+}
+.password-field {
+    display: flex !important;
+    align-items: center !important;
+}
+.password-toggle {
+    background: none !important;
+    border: none !important;
+    font-size: 1.2rem !important;
+    margin-left: -2.2rem !important;
+    color: #e170b5 !important;
+    cursor: pointer !important;
+    outline: none !important;
+    transition: color 0.2s !important;
+}
+.password-toggle:hover {
+    color: #b84d8a !important;
+}
+.btn-submit {
+    width: 100% !important;
+    background: linear-gradient(90deg, #e170b5 0%, #ffb6d5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 16px !important;
+    padding: 0.8rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    margin-top: 0.5rem !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: background 0.2s, box-shadow 0.2s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.7rem !important;
+}
+.btn-submit:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #e170b5 100%) !important;
+    box-shadow: 0 4px 18px #ffd6e0 !important;
+}
+.form-footer {
+    margin-top: 1.2rem !important;
+    color: #bfa5b8 !important;
+    font-size: 0.98rem !important;
+}
+.form-footer a {
+    color: #e170b5 !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+}
+
+@media (max-width: 600px) {
+    .form-card {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem !important;
+        max-width: 98vw !important;
+    }
+}
+/* --- Sweet Shop Home Page Custom Styles --- */
+
+body {
+    background: linear-gradient(135deg, #ffe0f7 0%, #ffd6e0 100%) !important;
+    color: #3a2d3c !important;
+}
+
+.header {
+    background: #fff0fa !important;
+    box-shadow: 0 4px 24px 0 rgba(255, 182, 193, 0.15) !important;
+    border-bottom: 2px solid #ffd6e0 !important;
+}
+
+.logo {
+    color: #e170b5 !important;
+    font-size: 2.2rem !important;
+    letter-spacing: 2px !important;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+}
+
+.logo-icon {
+    background: #e170b5 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 2rem !important;
+    box-shadow: 0 2px 12px #ffd6e0 !important;
+}
+
+.nav-links a {
+    color: #b84d8a !important;
+    background: transparent !important;
+    font-weight: 600 !important;
+    border-radius: 20px !important;
+    transition: background 0.2s, color 0.2s !important;
+}
+.nav-links a:hover {
+    background: #ffe0f7 !important;
+    color: #e170b5 !important;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #e170b5 0%, #ffb6d5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #e170b5 100%) !important;
+    color: #fff !important;
+}
+.btn-secondary {
+    background: #fff0fa !important;
+    color: #e170b5 !important;
+    border: 2px solid #e170b5 !important;
+}
+.btn-secondary:hover {
+    background: #e170b5 !important;
+    color: #fff !important;
+}
+
+.hero {
+    background: linear-gradient(135deg, #ffe0f7 60%, #ffd6e0 100%) !important;
+    color: #b84d8a !important;
+    border-radius: 32px !important;
+    box-shadow: 0 8px 40px 0 #ffd6e0 !important;
+    margin: 2rem auto 2rem auto !important;
+    max-width: 900px !important;
+    padding: 4rem 2rem 3rem 2rem !important;
+    text-align: center !important;
+}
+.hero h1 {
+    color: #e170b5 !important;
+    font-size: 3.5rem !important;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+    margin-bottom: 0.5rem !important;
+    letter-spacing: 2px !important;
+    text-shadow: 0 2px 8px #ffd6e0 !important;
+}
+.hero .subtitle {
+    color: #b84d8a !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 1.2rem !important;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+}
+.hero p {
+    color: #a77ca0 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 2.2rem !important;
+    line-height: 1.7 !important;
+    text-shadow: none !important;
+}
+.hero-buttons .btn {
+    margin: 0 0.5rem !important;
+    min-width: 180px !important;
+    font-size: 1.1rem !important;
+}
+
+main {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 2.5rem 1rem 2rem 1rem !important;
+        max-width: 98vw !important;
+    }
+    .hero h1 {
+        font-size: 2.2rem !important;
+    }
+    .hero .subtitle {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        padding: 0.7rem !important;
+    }
+    .hero {
+        padding: 1.2rem 0.2rem 1.2rem 0.2rem !important;
+    }
+    .hero h1 {
+        font-size: 1.3rem !important;
+    }
+    .hero .subtitle {
+        font-size: 1rem !important;
+    }
+}
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e17055;
+}
+
+.logo-icon {
+    background: #e17055;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.nav-links a:hover {
+    color: #e17055;
+    background: #f8f8f8;
+}
+
+.auth-buttons, .user-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Shop Container - Main Layout */
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Shop Header */
+.shop-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.shop-header h1 {
+    color: #e17055;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.shop-header p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Shop Controls */
+.shop-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid #f1f1f1;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #e17055;
+}
+
+.search-bar::before {
+    content: '🔍';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #f1f1f1;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    min-width: 150px;
+}
+
+.filter-select:focus {
+    border-color: #e17055;
+}
+
+/* Results Count */
+.results-count {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Product Grid - Fixed Layout */
+
+.product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    margin-bottom: 2rem !important;
+    justify-items: center !important;
+}
+
+/* Product Card - Matching the image exactly */
+
+.product-card {
+    background: white;
+    border-radius: 16px !important;
+    padding: 1.2rem 1rem !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 260px !important;
+    max-width: 320px !important;
+    margin: 0 auto 1.2rem auto !important;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+
+.product-title {
+    font-size: 1.1rem !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    flex: 1 !important;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #f39c12;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.product-category {
+    background: #ffeaa7;
+    color: #e17055;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.product-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+/* Product Footer - Price and Button Layout */
+.product-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.product-price {
+    font-size: 1.1rem !important;
+    color: #e170b5 !important;
+    font-weight: bold !important;
+}
+
+.stock-info {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.stock-info.out-of-stock {
+    color: #e74c3c;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #e17055;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #d63031;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #e17055;
+    border: 2px solid #e17055;
+}
+
+.btn-secondary:hover {
+    background: #e17055;
+    color: white;
+}
+
+
+
+.btn-add-cart {
+    background: linear-gradient(90deg, #e170b5 0%, #ffb6d5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 0.7rem 1.2rem !important;
+    border-radius: 16px !important;
+    cursor: pointer !important;
+    font-weight: 700 !important;
+    font-size: 0.98rem !important;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1) !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    box-shadow: 0 2px 8px #ffd6e0 !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 0.5rem !important;
+}
+
+.btn-add-cart:hover:not(:disabled) {
+    background: linear-gradient(90deg, #ffb6d5 0%, #e170b5 100%) !important;
+    color: #fff !important;
+    transform: translateY(-2px) scale(1.03) !important;
+    box-shadow: 0 4px 18px #ffd6e0 !important;
+}
+
+.btn-add-cart:disabled {
+    background: #f8e1ef !important;
+    color: #bfa5b8 !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Loading and Empty States */
+.loading-spinner {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+.no-products {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Alert Messages */
+.alert {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border-color: #ffeaa7;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.8rem !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.7rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .shop-container {
+        padding: 1rem;
+    }
+
+    .shop-header h1 {
+        font-size: 2rem;
+    }
+
+    .shop-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    .filters {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-card {
+        padding: 1rem;
+    }
+
+    .product-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .product-rating {
+        align-self: flex-end;
+    }
+}
+
+/* Fix for Hero Section if it exists */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                linear-gradient(135deg, #ffeaa7, #fab1a0);
+    color: white;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: #e17055;
+}
+
+.hero .subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: #555;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}

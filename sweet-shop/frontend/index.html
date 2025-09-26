@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Shop - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">🍭</div>
+            Sweet Shop
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="admin.html" id="admin-link" class="hidden">Admin Panel</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons" id="auth-buttons">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+        <div class="user-menu hidden" id="user-menu">
+            <span id="user-name"></span>
+            <button class="btn btn-secondary" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Sweet Dreams</h1>
+            <h2 class="subtitle">Come True</h2>
+            <p>Discover our carefully curated collection of premium chocolates, candies, and confections that bring joy to every moment.</p>
+            <div class="hero-buttons">
+                <a href="shop.html" class="btn btn-primary">🛍️ Start Shopping</a>
+                <a href="#" class="btn btn-secondary">Join Our Community</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuthStatus();
+        });
+    </script>
+</body>
+</html>

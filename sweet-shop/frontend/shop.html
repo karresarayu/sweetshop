@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Sweet Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">🍭</div>
+            Sweet Shop
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html" id="admin-link" class="hidden">Admin Panel</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count" class="cart-count">0</span>
+        </div>
+        <div class="auth-buttons" id="auth-buttons">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+        <div class="user-menu hidden" id="user-menu">
+            <span id="user-name"></span>
+            <button class="btn btn-secondary" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="shop-container">
+            <div class="shop-header">
+                <h1>Sweet Collection</h1>
+                <p>Discover our premium selection of handcrafted sweets and confections</p>
+            </div>
+            
+            <div class="shop-controls">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search sweets...">
+                </div>
+                
+                <div class="filters">
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="gummies">Gummies</option>
+                        <option value="caramel">Caramel</option>
+                        <option value="hard candy">Hard Candy</option>
+                        <option value="lollipops">Lollipops</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <select id="price-filter" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="0-10">$0 - $10</option>
+                        <option value="10-20">$10 - $20</option>
+                        <option value="20-max">$20+</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="results-count">Loading sweets...</div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/shop.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuthStatus();
+        });
+    </script>
+</body>
+</html>
